@@ -1,0 +1,25 @@
+{
+    "0": 
+    {
+        "epochs": 100,
+        "batch_size": 10,
+        "Smoothing": 0,
+        "cell": "encdec",
+        "lod": 10,
+        "lsd": 20,
+        "QNetwork": "Xmlp",
+        "Num_Bases": 15,
+        "Use_Conv_Covar": 0,
+        "USE_MLP_AFTER_KGGRU": 1,
+        "KG_Units": 30,
+        "Xgru_Units": 15,
+        "Fgru_Units": 15,
+        "KG_InputSize": 25,
+        "Xgru_InputSize": 15,
+        "Fgru_InputSize": 15,
+        "lr": 0.001,
+        "lr_decay": 0.5,
+        "lr_decay_iteration": 15,
+        "draw_fig": 1
+    }
+}
