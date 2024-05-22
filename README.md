@@ -4,7 +4,7 @@ Submission for NeurIPS 2024, the Thirty-eighth Annual Conference on Neural Infor
 
 ## Framework
 
-![image](./assets/overall_framework.png)
+![image](./Figs/filtering_smoothing.png)
 
 ## Requirements
 
