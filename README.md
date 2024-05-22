@@ -6,6 +6,34 @@ Submission for NeurIPS 2024, the Thirty-eighth Annual Conference on Neural Infor
 
 ![image](./Figs/filtering_smoothing.png)
 
+## Demo (sequence generation and image imputation)
+
+
+<!--  ![Demo](./Figs/gen_sequence_genseq12.gif) -->
+*  Four irregular edges 
+<p align="center">
+  <img src="./Figs/gen_sequence_genseq12.gif" alt="Demo 1" width="45%" style="margin-right: 10px;">
+  <img src="./Figs/imputation_sequence_genseq12.gif" alt="Demo 2" width="45%">
+</p>
+
+*  Five irregular edges 
+<p align="center">
+  <img src="./Figs/gen_sequence_genseq16.gif" alt="Demo 3" width="45%" style="margin-right: 10px;">
+  <img src="./Figs/imputation_sequence_genseq16.gif" alt="Demo 4" width="45%">
+</p>
+
+*  Six irregular edges 
+<p align="center">
+  <img src="./Figs/gen_sequence_genseq20.gif" alt="Demo 5" width="45%" style="margin-right: 10px;">
+  <img src="./Figs/imputation_sequence_genseq20.gif" alt="Demo 6" width="45%">
+</p>
+
+*  Seven irregular edges 
+<p align="center">
+  <img src="./Figs/gen_sequence_genseq8.gif" alt="Demo 7" width="45%" style="margin-right: 10px;">
+  <img src="./Figs/imputation_sequence_genseq8.gif" alt="Demo 8" width="45%">
+</p>
+
 ## Requirements
 
 Python 3.8 or later with all ```requirements.txt``` dependencies installed. To install run:
