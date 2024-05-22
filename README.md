@@ -2,44 +2,93 @@
 This is a, commented version of the Code used for the experiments described in the paper.
 Submission for NeurIPS 2024, the Thirty-eighth Annual Conference on Neural Information Processing Systems 
 
+## Requirements
+
+Python 3.8 or later with all ```requirements.txt``` dependencies installed. To install run:
+```bash
+$ pip install -r requirements.txt
+```
 
 ## Code
+### Data Preparation
+The data for single pendulum, double pendulum and irregular polygon experiments
+are synthetized as explained in details bellow. But we cannot share KITTI dataset because of their regulation. Please visit their [webpage](https://www.cvlibs.net/datasets/kitti/) 
+for further details.
 
-### double_pendulum image imputation
-  Contains simulator for double_pendulum image imputation, see seperate readme
-  
-### double_pendulum_state_estimation
-  Contains simulator for double_pendulum state estimation, see seperate readme
-  
-### pendulum  image imputation
-  Contains simulator for single_pendulum image imputation, see seperate readme
-  
-### pendulum state estimation
-  Contains simulator for single_pendulum state estimation, see seperate readme
-  
-### Lorenz
-  Contains simulator for 
-  - "lorenz with known states"(we are aware of the dynamics)
-  - "lorenz with known states smoothing" (using smoothing distribution)
-  - "lorenz with unknown states"(we lack the dynamics). 
-  see seperate readme for each one.
+For simplicity, we are calling data generation modules in the ``main_script`` so can skip the data generation section.
+Data generation `.py` files for single pendulum, double pendulum and irregular polygon experiments:
 
-### NCLT data
-Contains simulator for 
-  - "Known dynamics"(we are aware of the dynamics)
-  - "Known dynamics smoothing" (using smoothing distribution)
-  - "Unknown Dynamics"(we lack the dynamics). 
- 
- see seperate readme for each one.
+>   * project dir
+>     * double pendulum image imputation
+>       * `DoublePendulum.py`
+>     * double pendulum state estimation
+>       * `DoublePendulum.py`
+>     * pendulum image imputation
+>       * `PendulumData.py`
+>     * pendulum state estimation
+>       * `PendulumData.py`
+>     * polybox image imputation
+>       * PolyboxData.py
+>       * PymunkData.py
+>     * polybox state estimation
+>       * PolyboxData.py
+>       * PymunkData.py
 
 
+### Experiments
+If you just want run the experiments, you can directly run the ``main_script`` of each experiment as follow:
+* double_pendulum image imputation
+ ```
+cd double pendulum image imputation
+python double_pendulum_image_imputation.py --config config0.json
+cd ..
+```
+After running the code, dataset will be generated in `double pendulum image imputation/data` folder and the results are saved at 
+`double pendulum image imputation/results`
+
+* double pendulum state estimation
+ ```
+cd double pendulum state estimation
+python double_pendulum_state_estimation.py --config config0.json
+cd ..
+```
+After running the code, dataset will be generated in `double pendulum state estimation/data` folder and the results are saved at 
+`double pendulum state estimation/results`
+
+* pendulum image imputation
+ ```
+cd pendulum image imputation
+python pendulum_image_imputation.py --config config.json
+cd ..
+```
+After running the code, dataset will be generated in `pendulum image imputation/data` folder and the results are saved at 
+`pendulum image imputation/results`
+
+* pendulum state estimation
+ ```
+cd pendulum state estimation
+python pendulum_state_estimation.py --config config.json
+cd ..
+```
+After running the code, dataset will be generated in `pendulum state estimation/data` folder and the results are saved at 
+`pendulum state estimation/results`
+
+* polybox image imputation
+ ```
+cd polybox image imputation
+python polybox_image_imputation.py --config config.json
+cd ..
+```
+After running the code, dataset will be generated in `polybox image imputation/data` folder and the results are saved at 
+`polybox image imputation/results`
+
+* polybox state estimation
+ ```polybox_state_estimation.py
+cd polybox state estimation
+python polybox_state_estimation.py --config config.json
+cd ..
+```
+After running the code, dataset will be generated in `polybox state estimation/data` folder and the results are saved at 
+`polybox state estimation/results`
 
 
-## Dependencies
-
-  - python 
-  - tensorflow 
-  - numpy 
-  - pillow 
-  - torch
-  - math
